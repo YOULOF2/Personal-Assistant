@@ -34,6 +34,8 @@ def return_video_url_youtube(video_id):
 def return_audio_url_youtube(video_id):
     audio_url = f"{Resources.Endpoints.YOUTUBE_WATCH}?v={video_id}"
     audio = pafy.new(audio_url)
-    best_quality = audio.getbestaudio("mp4")
+    best_quality = audio.getbestaudio()
     play_url = best_quality.url
     return play_url
+
+
