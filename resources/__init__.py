@@ -20,3 +20,6 @@ class Resources:
 
     class Endpoints:
         OPEN_WEATHER_API = "https://api.openweathermap.org/data/2.5/weather"
+        YOUTUBE_SEARCH_RESULTS = "https://www.youtube.com/results"
+        YOUTUBE_WATCH = "https://www.youtube.com/watch"
+
