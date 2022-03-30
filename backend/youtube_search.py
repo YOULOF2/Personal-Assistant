@@ -2,7 +2,7 @@ from resources import Resources
 import pafy
 from youtubesearchpython import VideosSearch
 
-__all__ = ["return_video_url_youtube", "search_youtube"]
+__all__ = ["return_video_url_youtube", "search_youtube", "return_audio_url_youtube"]
 
 
 def search_youtube(query):
@@ -27,5 +27,13 @@ def return_video_url_youtube(video_id):
     video_url = f"{Resources.Endpoints.YOUTUBE_WATCH}?v={video_id}"
     video = pafy.new(video_url)
     best_quality = video.getbest()
+    play_url = best_quality.url
+    return play_url
+
+
+def return_audio_url_youtube(video_id):
+    audio_url = f"{Resources.Endpoints.YOUTUBE_WATCH}?v={video_id}"
+    audio = pafy.new(audio_url)
+    best_quality = audio.getbestaudio("mp4")
     play_url = best_quality.url
     return play_url

@@ -9,7 +9,6 @@ My Personal Assistant
    - Show the latest weather
    - Search Wikipedia
    - Search Wikitionary
-   - Music Streaming
    - YouTube Streaming
    - TODO list
    - Say Jokes
