@@ -14,7 +14,7 @@ My Personal Assistant
    - [x] TODO list
    - [x] Say Jokes
    - [x] Say trivia, and await answers
-   - [ ] Tell Stories
+   - [ ] Retrieve Books via Project Gutenberg
    - [ ] Play Tic-Tac-Toe
 
 
