@@ -11,9 +11,9 @@ My Personal Assistant
    - [x] Search Wikitionary
    - [x] Music Streaming
    - [x] YouTube Streaming
-   - [ ] TODO list
-   - [ ] Say Jokes
-   - [ ] Say riddles, and await answers
+   - [x] TODO list
+   - [x] Say Jokes
+   - [x] Say trivia, and await answers
    - [ ] Tell Stories
    - [ ] Play Tic-Tac-Toe
 

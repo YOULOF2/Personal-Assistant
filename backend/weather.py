@@ -2,17 +2,18 @@ from resources import Resources
 import requests
 
 __all__ = ["get_weather"]
-ENDPOINT = Resources.Endpoints.OPEN_WEATHER_API
-
-PARAMETERS = {
-    "appid": Resources.Secrets.OPENWEATHERMAP_API_KEY,
-    "lat": Resources.Secrets.LATITUDE,
-    "lon": Resources.Secrets.LONGITUDE,
-    "units": "metric",
-}
 
 
 def get_weather():
+    ENDPOINT = Resources.Endpoints.OPEN_WEATHER_API
+
+    PARAMETERS = {
+        "appid": Resources.Secrets.OPENWEATHERMAP_API_KEY,
+        "lat": Resources.Secrets.LATITUDE,
+        "lon": Resources.Secrets.LONGITUDE,
+        "units": "metric",
+    }
+
     request = requests.get(ENDPOINT, params=PARAMETERS)
     weather_json = request.json()
     final_json = {

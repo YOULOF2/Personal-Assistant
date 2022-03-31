@@ -1,5 +1,7 @@
 from wiktionaryparser import WiktionaryParser
 
+__all__ = ["dictionary_lookup"]
+
 
 def dictionary_lookup(word):
     parser = WiktionaryParser()
