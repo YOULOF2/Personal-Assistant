@@ -24,8 +24,5 @@ class Resources:
         YOUTUBE_WATCH = "https://www.youtube.com/watch"
         JOKES_API = "https://v2.jokeapi.dev/joke/Any"
         TRIVIA_DB = "https://opentdb.com/api.php"
-        PROJECT_GUTENBERG_SEARCH = "https://www.gutenberg.org/ebooks/search/"
-        PROJECT_GUTENBERG_BOOK = "https://www.gutenberg.org/ebooks/"
-        PROJECT_GUTENBERG_BASE = "https://www.gutenberg.org/"
 
 

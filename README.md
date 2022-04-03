@@ -1,7 +1,7 @@
 ![banner image](resources/README/github%20banner%20image.png)
 
 
- <h2>Abilities:</h2>
+ <h2 align="center">Abilities:</h2>
    
    - [ ] Lookup anime
    - [x] Show the latest weather
@@ -12,7 +12,6 @@
    - [x] TODO list
    - [x] Say Jokes
    - [x] Say trivia, and await answers
-   - [ ] Retrieve Books via Project Gutenberg
    - [ ] Play Tic-Tac-Toe
    - [ ] Lookup the latest memes on reddit
    - [ ] Solve math problems and equations
@@ -20,13 +19,13 @@
    - [ ] Have alarm and timer functionality
 
 
- <h2>Features:</h2>
+ <h2 align="center">Features:</h2>
  
  - Natural Language Processing
  - Google cloud tts?
 
 
-<h2>Frontends:</h2>
+<h2 align="center">Frontends:</h2>
  
  - [ ] Command Line
  - [ ] Windows Desktop
