@@ -1,4 +1,4 @@
-![banner image](resources/README/Personal-Assitant.png)
+![banner image](resources/README/github%20banner%20image.png)
 
 
  <h2>Abilities:</h2>
