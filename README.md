@@ -16,6 +16,10 @@ My Personal Assistant
    - [x] Say trivia, and await answers
    - [ ] Retrieve Books via Project Gutenberg
    - [ ] Play Tic-Tac-Toe
+   - [ ] Lookup the latest memes on reddit
+   - [ ] Solve math problems and equations
+   - [ ] Connect to google calendar and read and update schedule 
+   - [ ] Have alarm and timer functionality
 
 
  <h2>Features:</h2>
