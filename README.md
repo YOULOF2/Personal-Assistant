@@ -1,6 +1,4 @@
-<h1>
-My Personal Assistant
-</h1>
+![banner image]("resources/README/Personal-Assitant.png")
 
 
  <h2>Abilities:</h2>
