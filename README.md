@@ -33,11 +33,11 @@
  - [ ] Website
 
 
-<h1 style="font-family: 'Cascadia Code',monospace;">Resources</h1>
+<h1>Resources</h1>
 
   - Natural Language Processing: <a href="https://realpython.com/nltk-nlp-python/">Here</a>
   - Text To Speach: <a href="https://cloud.google.com/text-to-speech/">Here</a>
   - Stream Audio from YouTube: <a href="https://stackoverflow.com/questions/49354232/how-to-stream-audio-from-a-youtube-url-in-python-without-download/49354406#49354406">Here</a>
 
 <h1>System Architecture</h1>
-<image href="resources/README/SystemArchitecture.png" style="width:1000px;height:auto;"></image>
+![system Architecture image](resources/README/SystemArchitecture.png)
