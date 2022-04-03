@@ -27,10 +27,8 @@
 
 <h1 align="center">Frontends:</h1>
  
- - [ ] Command Line
  - [ ] Windows Desktop
  - [ ] Android App
- - [ ] Website
 
 
 <h1>Resources</h1>
