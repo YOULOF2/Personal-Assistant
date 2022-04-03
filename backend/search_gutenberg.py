@@ -45,9 +45,11 @@ def get_book_gutenberg(book_id):
                 book_title = soup.find("h1").text
                 chapters_titles = [chapter.find("a") for chapter in soup.find_all("td")]
                 chapters_titles = [text.text for text in chapters_titles if text is not None]
-                # ! TODO: Make sure no numbers are counted as titles
-                pprint(chapters_titles)
-
+                cleaned_chapter_titles = []
+                for title in chapters_titles:
+                    if not title.isdigit():
+                        cleaned_chapter_titles.append(title)
+                print("jello")
                 all_chapters = []
                 for chapter in soup.find_all("div", class_="chapter"):
                     all_p_in_chapter = []
@@ -56,9 +58,9 @@ def get_book_gutenberg(book_id):
                         all_p_in_chapter.append(paragraph_text)
                     all_chapters.append("\n".join(all_p_in_chapter))
 
-                print(f"Chapters: {len(chapters_titles)}, Text: {len(all_chapters)}")
+                # print(f"Chapters: {len(cleaned_chapter_titles)}, Text: {len(all_chapters)}")
                 book_json = []
-                for title, text in zip(chapters_titles, all_chapters):
+                for title, text in zip(cleaned_chapter_titles, all_chapters):
                     book_json.append(
                         {
                             "number": chapters_titles.index(title),
@@ -74,4 +76,4 @@ def get_book_gutenberg(book_id):
     logger.error("Function executed without returning")
 
 
-get_book_gutenberg(67734)
+print(get_book_gutenberg(1661))
