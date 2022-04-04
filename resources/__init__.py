@@ -17,6 +17,8 @@ class Resources:
         LONGITUDE = getenv("LONGITUDE")
         LATITUDE = getenv("LATITUDE")
         OPENWEATHERMAP_API_KEY = getenv("OPEN_WEATHER_MAP_API_KEY")
+        REDDIT_PRAW_API_KEY = getenv("REDDIT_PRAW_API_KEY")
+        REDDIT_PRAW_API_USER_KEY = getenv("REDDIT_PRAW_API_USER_KEY")
 
     class Endpoints:
         OPEN_WEATHER_API = "https://api.openweathermap.org/data/2.5/weather"
