@@ -1,5 +1,22 @@
 ![banner image](resources/README/github%20banner%20image.png)
 
+<h1>👾 Tech Stack</h1>
+<details>
+ <summary>Backend</summary>
+ <ul>
+  <l1>Python</l1>
+  <ul>
+   <l1>Requests</l1>
+   <l1>...</l1>
+  </ul>
+ </ul>
+</details>
+<details>
+ <summary>Frontend</summary>
+ <ul>
+  <l1>Flutter</li>
+ </ul>
+</details>
 
  <h1 align="center">🗺️ Road Map</h1>
    
