@@ -1,6 +1,6 @@
 ![banner image](resources/README/github%20banner%20image.png)
 
-<h1>👾 Tech Stack</h1>
+<h1 align="center">👾 Tech Stack</h1>
 <details>
  <summary>Backend</summary>
  <ul>
