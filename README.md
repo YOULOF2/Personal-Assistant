@@ -3,6 +3,7 @@
 
  <h1 align="center">Abilities:</h1>
    
+### Backend
    - [ ] Lookup anime
    - [x] Show the latest weather
    - [x] Search Wikipedia
@@ -12,12 +13,15 @@
    - [x] TODO list
    - [x] Say Jokes
    - [x] Say trivia, and await answers
-   - [ ] Play Tic-Tac-Toe
-   - [ ] Lookup the latest memes on reddit
+   - [x] Lookup the latest memes on reddit
    - [ ] Solve math problems and equations
    - [ ] Connect to google calendar and read and update schedule 
+
+### Frontend
+   - [ ] Play Tic-Tac-Toe
    - [ ] Have alarm and timer functionality
 
+---
 
  <h1 align="center">Features:</h1>
  
