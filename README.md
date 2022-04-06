@@ -1,9 +1,9 @@
 ![banner image](resources/README/github%20banner%20image.png)
 
 
- <h1 align="center">Abilities:</h1>
+ <h1 align="center">🗺️ Road Map</h1>
    
-### Backend
+### Backend 👨‍💻
    - [ ] Lookup anime
    - [x] Show the latest weather
    - [x] Search Wikipedia
@@ -17,25 +17,23 @@
    - [ ] Solve math problems and equations
    - [ ] Connect to google calendar and read and update schedule 
 
-### Frontend
+### Frontend 💄
    - [ ] Play Tic-Tac-Toe
    - [ ] Have alarm and timer functionality
 
----
-
- <h1 align="center">Features:</h1>
+ <h1 align="center">🔧 Features:</h1>
  
  - Natural Language Processing
  - Google cloud tts?
 
 
-<h1 align="center">Frontends:</h1>
+<h1 align="center">💄 Frontends:</h1>
  
  - [ ] Windows Desktop
  - [ ] Android App
 
 
-<h1>Resources</h1>
+<h1>🔎 Resources</h1>
 
   - Natural Language Processing: <a href="https://realpython.com/nltk-nlp-python/">Here</a>
   - Text To Speach: <a href="https://cloud.google.com/text-to-speech/">Here</a>
