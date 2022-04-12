@@ -1,5 +1,7 @@
 ![banner image](resources/README/github%20banner%20image.png)
 
+<h1>Latest Version: <em>0.1.0.0</em></h1>
+
 <h1 align="center">👾 Tech Stack</h1>
 <details>
  <summary>Backend</summary>
@@ -31,7 +33,7 @@
    - [x] Say Jokes
    - [x] Say trivia, and await answers
    - [x] Lookup the latest memes on reddit
-   - [ ] Solve math problems and equations
+   - [x] Solve math problems and equations
    - [ ] Connect to google calendar and read and update schedule 
 
 ### Frontend 💄
