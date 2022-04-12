@@ -1,6 +1,6 @@
 ![banner image](resources/README/github%20banner%20image.png)
 
-<h2 align="right">Latest Version: <em>0.1.0.0</em></h2>
+<h2 align="right">Current Version: <em>0.1.0.0</em></h2>
 
 <h1 align="center">👾 Tech Stack</h1>
 <details>
