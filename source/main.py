@@ -1,4 +1,6 @@
-# from backend import process_text
-#
-#
-# process_text("what is the weather")
+from loguru import logger
+from source.backend import PersonalAssistant
+
+logger.add("file.log", rotation="1 week")
+
+PersonalAssistant().process("What is your favourite food")

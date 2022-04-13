@@ -1,18 +1,20 @@
 import inspect
 from os import getenv
 from random import choice
+import functools
 
 import pafy
 import praw
 import requests
 import wikipedia
+import yake
 from dotenv import load_dotenv
+from loguru import logger
 from sympy import sympify, solve
 from wiktionaryparser import WiktionaryParser
 from youtubesearchpython import VideosSearch
 
-from todo_list import ToDoList, ToDoItem
-import yake
+from source.backend.todo_list import ToDoList, ToDoItem
 
 load_dotenv()
 
@@ -58,11 +60,20 @@ class PersonalAssistant:
 
         self.__last_actions = []
 
+    @staticmethod
+    def __logger(function):
+        @functools.wraps(function)
+        def wrapper(*args, **kwargs):
+            logger.debug(f"'{function.__name__}' function has been called", colors=True)
+            return function(*args, **kwargs)
+        return wrapper
+
     def __update_latest_actions(self):
         function_name = str(inspect.stack()[1].function).removeprefix("__")
 
         self.__last_actions.append(function_name)
 
+    @__logger
     def __get_joke(self):
         self.__update_latest_actions()
 
@@ -76,6 +87,7 @@ class PersonalAssistant:
         joke = request_json.get("joke")
         return joke
 
+    @__logger
     def __get_hot_memes(self):
         self.__update_latest_actions()
 
@@ -105,6 +117,7 @@ class PersonalAssistant:
 
         return hot_memes
 
+    @__logger
     def __get_trivia(self):
         self.__update_latest_actions()
 
@@ -121,6 +134,7 @@ class PersonalAssistant:
 
         return joke_json
 
+    @__logger
     def __get_weather(self):
         self.__update_latest_actions()
 
@@ -144,11 +158,13 @@ class PersonalAssistant:
         }
         return final_json
 
+    @__logger
     def __wikipedia_search(self, text):
         self.__update_latest_actions()
 
         return wikipedia.summary(text, sentences=3)
 
+    @__logger
     def __dictionary_search(self, word):
         self.__update_latest_actions()
 
@@ -157,6 +173,7 @@ class PersonalAssistant:
         definitions = word[0].get("definitions")[0].get("text")
         return definitions
 
+    @__logger
     def __youtube_search(self, query):
         self.__update_latest_actions()
 
@@ -191,6 +208,7 @@ class PersonalAssistant:
             )
         return all_videos_data
 
+    @__logger
     def __calculate(self, expression):
         self.__update_latest_actions()
 
@@ -200,6 +218,7 @@ class PersonalAssistant:
 
         return eval(expression)
 
+    @__logger
     def __extract_keywords(self, text):
         language = "en"
         max_ngram_size = 3
@@ -224,14 +243,15 @@ class PersonalAssistant:
 
         return text_list
 
+    @__logger
+    def process(self, text):
+        keywords_list = self.__extract_keywords(text)
+        print(keywords_list)
+
+    @__logger
     def test_function(self):
         print(self.__youtube_search("jacksepticeye"))
         self.__update_latest_actions()
         print(self.__last_actions)
 
-    def process(self, text):
-        keywords_list = self.__extract_keywords(text)
-        print(keywords_list)
 
-
-PersonalAssistant().process("What is your favourite food")
