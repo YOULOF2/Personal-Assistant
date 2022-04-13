@@ -1,7 +1,7 @@
+import functools
 import inspect
 from os import getenv
 from random import choice
-import functools
 
 import pafy
 import praw
