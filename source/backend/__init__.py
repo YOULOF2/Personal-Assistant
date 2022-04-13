@@ -1,6 +1,8 @@
 import functools
 import inspect
+import json
 from os import getenv
+from pathlib import Path
 from random import choice
 
 import pafy
@@ -33,6 +35,7 @@ class Resources:
         YOUTUBE_WATCH = "https://www.youtube.com/watch"
         JOKES_API = "https://v2.jokeapi.dev/joke/Any"
         TRIVIA_DB = "https://opentdb.com/api.php"
+        ANIME_DATABASE_JSON = "https://raw.githubusercontent.com/manami-project/anime-offline-database/master/anime-offline-database-minified.json"
 
     class Constants:
         POSSIBLE_FAVOURITES_LIST = [
@@ -59,6 +62,7 @@ class PersonalAssistant:
         self.user_favourites = kwargs.get("UserFavourites")
 
         self.__last_actions = []
+        self.__anime_database_path = str(Path(Path(__file__).parent.parent.parent, "resources/anime_database.json"))
 
     @staticmethod
     def __logger(function):
@@ -66,6 +70,7 @@ class PersonalAssistant:
         def wrapper(*args, **kwargs):
             logger.debug(f"'{function.__name__}' function has been called", colors=True)
             return function(*args, **kwargs)
+
         return wrapper
 
     def __update_latest_actions(self):
@@ -209,6 +214,27 @@ class PersonalAssistant:
         return all_videos_data
 
     @__logger
+    def __anime_search(self, query):
+        self.__update_latest_actions()
+
+        if not Path(self.__anime_database_path).is_file():
+            database_text = requests.get(Resources.Endpoints.ANIME_DATABASE_JSON).text
+            with open(self.__anime_database_path, "w", encoding="utf-8") as file:
+                file.write(database_text)
+
+        with open(self.__anime_database_path, encoding="utf-8") as database_file:
+            json_data = json.loads(database_file.read())
+            all_anime = json_data.get("data")
+
+        all_results = []
+        for anime in all_anime:
+            anime_title = anime.get("title").lower()
+            alternate_titles = [alt_title.lower() for alt_title in anime.get("synonyms")]
+            if query.lower() in anime_title or query.lower() in alternate_titles:
+                all_results.append(anime)
+        return all_results
+
+    @__logger
     def __calculate(self, expression):
         self.__update_latest_actions()
 
@@ -250,8 +276,4 @@ class PersonalAssistant:
 
     @__logger
     def test_function(self):
-        print(self.__youtube_search("jacksepticeye"))
-        self.__update_latest_actions()
-        print(self.__last_actions)
-
-
+        self.__anime_search("One-punch man")
