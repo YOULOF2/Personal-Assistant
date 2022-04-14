@@ -55,7 +55,7 @@ class Resources:
 class PersonalAssistant:
     def __init__(self, **kwargs):
         self.assistant_name = kwargs.get("PersonalName")
-        self.assistant_favourites = [choice(Resources.Constants.POSSIBLE_FAVOURITES_LIST) for _ in range(3)]
+        self.assistant_favourite_food = [choice(Resources.Constants.POSSIBLE_FAVOURITES_LIST) for _ in range(3)]
         self.mood = 50
 
         self.user_name = kwargs.get("Username")
@@ -249,7 +249,7 @@ class PersonalAssistant:
         language = "en"
         max_ngram_size = 3
         deduplication_threshold = 0.1
-        numOfKeywords = 5
+        numOfKeywords = 3
         kw_extractor = yake.KeywordExtractor(lan=language, n=max_ngram_size, dedupLim=deduplication_threshold,
                                              top=numOfKeywords)
         keywords = kw_extractor.extract_keywords(text)
@@ -272,7 +272,23 @@ class PersonalAssistant:
     @__logger
     def process(self, text):
         keywords_list = self.__extract_keywords(text)
-        print(keywords_list)
+        for word in keywords_list:
+            # match case for me and your
+            match word:
+                case "your":
+                    keywords_list.remove("your")
+                    for word in keywords_list:
+                        match word:
+                            case "favourite":
+                                keywords_list.remove("favourite")
+                                last_keyword = keywords_list[-1]
+                                match last_keyword:
+                                    case "food":
+                                        print(self.assistant_favourite_food)
+                                    # ! So long and so forth
+
+                case "me":
+                    print("me")
 
     @__logger
     def test_function(self):
