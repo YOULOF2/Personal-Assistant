@@ -22,11 +22,11 @@ The goal is to create an artificial assistant that doubles as a friend... 😢
   sentence, to make the response seem more human.
 
 - ## Stage 5:
-  For the ```PersonalAssistant``` class, create 2 new attributes to represent happiness, anger and shyness:
+  For the ```PersonalAssistant``` class, create 2 new attributes to represent happiness, anger and excitement:
   `````````python
   self.happiness_score
   self.anger_score
-  self.shyness_score
+  self.excitement_score
   `````````
   The score values range from 0 to 100. Depending on the score of the attributes, answer time and attitude may vary. In
   addition, depending on how high the shyness score is, the chosen avatar may 'blush'.
@@ -62,7 +62,7 @@ The goal is to create an artificial assistant that doubles as a friend... 😢
   Using ```OpenCV``` library and possibly ```TensorFlow```, access the webcam and using facial recognition, identify the
   faces of the users of the program and possibly reply according to said person.
 
-  <h3 align="center">This Concludes <code>Version 1.5.0</code></h3>
+  <h3 align="center">This Concludes <code>Version 1.1.0</code></h3>
 
 - ## Stage 9:
     - Add Voice recognition to the application.
