@@ -29,6 +29,7 @@ MANIFEST
 
 # Files that would not be commited
 anime_database.json
+en_language_model.bin
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
