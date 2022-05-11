@@ -1,4 +1,4 @@
-![Personal-Assitant banner image](resources/README/github%20banner%20image.png)
+![Personal-Assitant banner image](README_ASSETS/github%20banner%20image.png)
 
 # Aims of The Project:
 

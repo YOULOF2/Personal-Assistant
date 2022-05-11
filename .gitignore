@@ -28,7 +28,7 @@ share/python-wheels/
 MANIFEST
 
 # Files that would not be commited
-anime_database.json
+*.json
 en_language_model.bin
 
 # PyInstaller
